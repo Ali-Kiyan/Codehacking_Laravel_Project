@@ -16,7 +16,7 @@
     @endif
 
 
-    <div class="col-sm-6 col-lg-6 col-md-6 animated fadeInLeft">
+    <div class="col-sm-6 col-lg-6 col-md-6">
 
 
 
@@ -36,7 +36,7 @@
 
     </div>
 
-    <div class="col-sm-6 col-lg-6 col-md-6 animated fadeInRight">
+    <div class="col-sm-6 col-lg-6 col-md-6">
 
 
         @if($categories)
@@ -50,7 +50,7 @@
             </thead>
           <tbody>
            @foreach($categories as $category)
-              <tr>
+              <tr class="animated fadeInRight">
                 <td>{{$category->id}}</td>
                 <td><a href="{{route('admin.categories.edit', $category->id)}}">{{$category->name}}</a></td>
                 <td>{{$category->created_at ? $category->created_at->diffForHumans() : 'No data available'}}</td>

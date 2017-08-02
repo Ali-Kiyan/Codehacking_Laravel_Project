@@ -6,6 +6,9 @@
 @section('content')
 
 
+
+
+  <div class="row">
     <h1>Create Users</h1>
 
 
@@ -41,6 +44,13 @@
         </div>
     {!! Form::close() !!}
 
+  </div>
+
+
+  <div class="row">
+
   @include('includes.form_error')
+
+  </div>
 
 @stop

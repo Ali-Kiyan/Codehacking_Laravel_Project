@@ -46,7 +46,8 @@
 
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> {{ Auth::user()->name }}  <i class="fa fa-caret-down"></i>
+                    <img src="{{Auth::user()->photo ? Auth::user()->photo->file : '/images/unknown.png'}}" alt="" style="border-radius: 50px;height: 18px;">      {{ Auth::user()->name }}  <i class="fa fa-caret-down"></i>
+
                 </a>
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -112,10 +113,10 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> Categories<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">All Categories</a>
+                                <a href="{{route('admin.categories.index')}}">All Categories</a>
                             </li>
                             <li>
-                                <a href="buttons.html">Create Category</a>
+                                <a href="{{route('admin.categories.create')}}">Create Category</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

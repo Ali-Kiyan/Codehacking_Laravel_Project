@@ -8,9 +8,11 @@
 @section('content')
 
 
-    <div class="row">
+
 
     <h1>Createt Post</h1>
+
+    <div class="row animated fadeIn">
 
     {!! Form::open(['method' => 'POST', 'action' => 'AdminPostsController@store', 'files'=>true]) !!}
         <div class="form-group">

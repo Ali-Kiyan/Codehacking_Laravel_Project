@@ -7,12 +7,6 @@
 
     <h1>Categories</h1>
 
-    @if(Session::has('deleted_category'))
-
-
-        <p class="alert alert-danger">{{session('deleted_user')}}</p>
-
-    @endif
 
 
     <div class="col-sm-6 col-lg-6 col-md-6">

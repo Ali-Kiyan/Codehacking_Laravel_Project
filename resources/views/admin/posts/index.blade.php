@@ -11,11 +11,11 @@
     @if(Session::has('deleted_post'))
 
 
-        <p class="alert alert-danger">{{session('deleted_user')}}</p>
+        <p class="alert alert-danger">{{session('deleted_post')}}</p>
 
     @endif
 
-    <table class="table table-condensed">
+    <table class="table table-condensed animated slideInUp">
       <thead>
         <tr>
                <th>Id</th>

@@ -8,7 +8,15 @@
     <h1>Categories</h1>
 
 
-    <div class="col-sm-6 col-lg-6 col-md-6">
+    @if(Session::has('deleted_category'))
+
+
+        <p class="alert alert-danger animated bounceIn">{{session('deleted_category')}}</p>
+
+    @endif
+
+
+    <div class="col-sm-6 col-lg-6 col-md-6 animated fadeInLeft">
 
 
 
@@ -28,7 +36,7 @@
 
     </div>
 
-    <div class="col-sm-6 col-lg-6 col-md-6">
+    <div class="col-sm-6 col-lg-6 col-md-6 animated fadeInRight">
 
 
         @if($categories)

@@ -16,7 +16,7 @@
     <h1>Users</h1>
 
 
-     <table class="table table-condensed">
+     <table class="table table-condensed animated zoomInUp">
        <thead>
          <tr>
              <th>ID</th>

@@ -10,7 +10,7 @@
 
     <div class="row">
 
-        <div class="col-sm-3">
+        <div class="col-sm-3 animated fadeInLeft">
 
             <img src="{{$user->photo ? $user->photo->file : '/images/unknown.png'}}" alt="" class="img-responsive img-rounded">
 

@@ -15,6 +15,7 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
     <link href="{{asset('css/animate.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
 
 
@@ -228,7 +229,7 @@
         <!-- /.navbar-static-side -->
     </nav>
 
-    <div id="page-wrapper" <div style="background-color: rgba(84, 146, 216, 0.1);">
+    <div id="page-wrapper" <div style="background-color: rgba(193, 213, 217, 0.01);">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">

@@ -131,6 +131,7 @@ textarea {
   color: inherit;
 }
 button {
+  border-radius: 0 !important;
   overflow: visible;
 }
 button,
@@ -143,6 +144,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+  border-radius: 0 !important;
 }
 button[disabled],
 html input[disabled] {
@@ -2272,12 +2274,13 @@ caption {
   text-align: left;
 }
 th {
-  text-align: left;
+  text-align: center;
 }
 .table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px;
+  text-align: center;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -8869,6 +8872,7 @@ table.dataTable thead .sorting:after {
 body {
 
 }
+
 .timeline {
     position: relative;
     padding: 20px 0 20px;

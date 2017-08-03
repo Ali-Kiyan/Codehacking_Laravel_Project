@@ -15,7 +15,7 @@
 
     @endif
 
-    <table class="table table-condensed animated slideInUp">
+    <table class="table table-condensed table-hover animated slideInUp">
       <thead>
         <tr>
                <th>Id</th>
@@ -24,6 +24,8 @@
                <th>Category</th>
                <th>Title</th>
                <th>Body</th>
+               <th style="background-color: whitesmoke">Post</th>
+               <th style="background-color: whitesmoke">Comment</th>
                <th>Created</th>
                <th>Updated</th>
           </tr>
@@ -40,6 +42,8 @@
                     <td>{{$post->category? $post->category->name:'Uncategorized'}}</td>
                     <td>{{$post->title}}</td>
                     <td>{{str_limit($post->body, 12)}}</td>
+                    <td style="background-color: whitesmoke"><a href="{{route('home.post', $post->id)}}" style="padding: inherit;">View Post</a></td>
+                    <td style="background-color:whitesmoke;"><a href="{{route('admin.comments.show', $post->id)}}">View Comment</a></td>
                     <td>{{$post->created_at->diffForhumans()}}</td>
                     <td>{{$post->updated_at->diffForhumans()}}</td>
                   </tr>

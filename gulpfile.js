@@ -22,8 +22,8 @@ elixir(function(mix) {
         'libs/font-awesome.css',
         'libs/metisMenu.css',
         'libs/sb-admin-2.css',
-        'styles.css',
-        'timeline.css'
+        'libs/styles.css',
+        'libs/timeline.css'
 
         ], './public/css/libs.css')
 

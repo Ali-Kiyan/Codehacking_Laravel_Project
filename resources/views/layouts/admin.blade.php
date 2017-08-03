@@ -228,7 +228,7 @@
         <!-- /.navbar-static-side -->
     </nav>
 
-    <div id="page-wrapper">
+    <div id="page-wrapper" <div style="background-color: rgba(84, 146, 216, 0.1);">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">

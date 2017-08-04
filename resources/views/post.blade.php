@@ -148,7 +148,32 @@
 
                  @endif
              @endforeach
-        @endif
+     @else
+
+
+
+
+                <button class="toggle-reply2 btn btn-primary pull-right">Reply</button>
+                <div class="comment-reply-first-level col-lg-9 col-sm-9 col-md-9" id="reply-section">
+                {!! Form::open(['method' => 'POST', 'action' => 'CommentRepliesController@createReply']) !!}
+                <div class="form-group">
+
+                    <input type="hidden" name="comment_id" value="{{$comment->id}}">
+
+
+                    {!! Form::label('body', '  ') !!}
+                    {!! Form::textarea('body', null, ['class'=>'form-control reply-section','rows'=>1])!!}
+                </div>
+                <div class="form-group">
+                    {!! Form::submit('Submit', ['class'=>'btn btn-primary']) !!}
+                </div>
+                {!! Form::close() !!}
+                </div>
+
+
+
+     @endif
+
 
 
 
@@ -201,7 +226,12 @@
 
            $(".comment-reply-container .toggle-reply").click(function(){
 
-             $(this).next().slideToggle("slow");
+             $(this).next().slideToggle("swing");
+
+           });
+           $(".toggle-reply2").click(function(){
+
+               $(this).next().slideToggle("swing");
 
            });
 

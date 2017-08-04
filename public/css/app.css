@@ -7,6 +7,9 @@
 .comment-reply {
   display: none; }
 
+.comment-reply-first-level {
+  display: none; }
+
 .reply-section {
   margin-top: 26px; }
 

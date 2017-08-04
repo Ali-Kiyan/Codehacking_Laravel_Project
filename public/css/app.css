@@ -1,4 +1,13 @@
 #admin-page {
   padding-top: 0px; }
 
+#nested-comment {
+  margin-top: 25px; }
+
+.comment-reply {
+  display: none; }
+
+.reply-section {
+  margin-top: 26px; }
+
 /*# sourceMappingURL=app.css.map */

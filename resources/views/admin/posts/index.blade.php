@@ -15,7 +15,7 @@
 
     @endif
 
-    <table class="table table-condensed table-hover animated slideInUp">
+    <table class="table table-condensed table-hover animated bounceInDown">
       <thead>
         <tr>
                <th>Id</th>
@@ -52,6 +52,10 @@
       </tbody>
     </table>
 
-
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5 col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5">
+            {!! $posts->render() !!}
+        </div>
+    </div>
 
 @stop

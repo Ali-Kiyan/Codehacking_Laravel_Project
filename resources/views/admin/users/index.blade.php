@@ -16,7 +16,7 @@
     <h1>Users</h1>
 
 
-     <table class="table table-condensed animated fadeInUp ">
+     <table class="table table-condensed animated fadeInDownBig ">
        <thead>
          <tr>
              <th>ID</th>
@@ -48,7 +48,13 @@
        @endif
        </tbody>
      </table>
+    <div class="row">
+    </div>
 
-
+     <div class="row">
+         <div class="col-sm-6 col-sm-offset-5 col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5">
+                {!! $users->render() !!}
+         </div>
+     </div>
 
 @stop

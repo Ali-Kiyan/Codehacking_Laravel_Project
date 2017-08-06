@@ -23,7 +23,7 @@
     <hr>
 
     <!-- Preview Image -->
-    <img class="img-responsive" src="{{$post->photo? $post->photo->file : '/images/unknownpost.jpg'}}" alt="" style="width: 30%;">
+    <img class="img-responsive animated fadeInLeft" src="{{$post->photo? $post->photo->file : '/images/unknownpost.jpg'}}" alt="" style="width: 30%;">
 
     <hr>
 
@@ -84,6 +84,8 @@
     <div class="media">
         <a class="pull-left" href="#">
             <img height="64" class="media-object" src="{{$comment->photo}}" alt="">
+            {{--<img height="64" class="media-object" src="{{Auth::user()->gravatar}}" alt="">--}}
+            {{--using gravatar insetead of actual photo--}}
         </a>
         <div class="media-body">
             <h4 class="media-heading">{{$comment->author}}

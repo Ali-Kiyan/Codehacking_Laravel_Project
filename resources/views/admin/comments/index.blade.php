@@ -32,7 +32,7 @@
             <td>{{$comment->author}}</td>
             <td>{{str_limit($comment->body, 17)}}</td>
             <td>{{$comment->email}}</td>
-            <td style="background-color: whitesmoke"><a href="{{route('home.post', $comment->post->id)}}">View Post</a></td>
+            <td style="background-color: whitesmoke"><a href="{{route('home.post', $comment->post->slug)}}">View Post</a></td>
             <td style="background-color: whitesmoke"><a href="{{route('admin.comment.replies.show', $comment->id)}}">View Replies</a></td>
 
               <td class="animated bounceInRight">

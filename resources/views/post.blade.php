@@ -199,7 +199,7 @@
             <div class="col-lg-6">
                 <ul class="list-unstyled">
 
-                    <li><a href="#">{{$post->category->name}}</a>
+                    <li><a href="#">{{$post->category ? $post->category->name : 'Not specified'}}</a>
                     </li>
                 </ul>
             </div>

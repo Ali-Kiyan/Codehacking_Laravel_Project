@@ -95,6 +95,8 @@ class AdminPostsController extends Controller
     public function edit($id)
     {
         //
+
+
         $post = Post::findOrFail($id);
         $categories = Category::lists('name','id')->all();
         return view('admin.posts.edit',compact('post','categories'));
@@ -156,9 +158,10 @@ class AdminPostsController extends Controller
     }
 
 
-    public function post ($id) {
+    public function post ($slug) {
 
-       $post = Post::findOrFail($id);
+
+       $post = Post::findBySlugOrFail($slug);
 
        $comments = $post->comments()->whereIsActive(1)->get();
 

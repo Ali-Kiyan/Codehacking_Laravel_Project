@@ -11,7 +11,7 @@
     @if(Session::has('deleted_post'))
 
 
-        <p class="alert alert-danger">{{session('deleted_post')}}</p>
+        <p class="alert alert-danger animated bounce">{{session('deleted_post')}}</p>
 
     @endif
 
@@ -42,7 +42,7 @@
                     <td>{{$post->category? $post->category->name:'Uncategorized'}}</td>
                     <td>{{$post->title}}</td>
                     <td>{{str_limit($post->body, 12)}}</td>
-                    <td style="background-color: whitesmoke"><a href="{{route('home.post', $post->id)}}" style="padding: inherit;">View Post</a></td>
+                    <td style="background-color: whitesmoke"><a href="{{route('home.post', $post->slug)}}" style="padding: inherit;">View Post</a></td>
                     <td style="background-color:whitesmoke;"><a href="{{route('admin.comments.show', $post->id)}}">View Comment</a></td>
                     <td>{{$post->created_at->diffForhumans()}}</td>
                     <td>{{$post->updated_at->diffForhumans()}}</td>

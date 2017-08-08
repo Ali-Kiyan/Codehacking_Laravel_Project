@@ -47,24 +47,41 @@ class AdminMediasController extends Controller
         unlink(public_path() . $photo->file);
         $photo->delete();
         Session::flash('deleted_photo','The selected photo has been deleted');
-        Return redirect('/admin/media');
+
     }
 
 
-    public function deleteMedia(Request $request) {
+    public function deleteMedia(Request $request)
+    {
 
-       $counter = 0;
-       $photos = Photo::findOrFail($request->checkBoxArray);
+        if (isset($request->delete_single)) {
 
-       foreach( $photos as $photo ){
+            $this->destroy($request->photo_single);
+            Return redirect()->back();
 
-        $photo->delete();
-        $counter++;
-       }
-        Session::flash('multiple_deleted_photo',"$counter photos has been deleted");
+        }
 
-    return redirect()->back();
+        if (isset($request->multi_delete) && !empty($request->checkBoxArray)) {
 
+
+            $counter = 0;
+            $photos = Photo::findOrFail($request->checkBoxArray);
+
+            foreach ($photos as $photo) {
+
+                $photo->delete();
+                $counter++;
+            }
+            Session::flash('multiple_deleted_photo', "$counter photos has been deleted");
+
+            return redirect()->back();
+
+        }
+        else{
+            Session::flash('no_input', "No selected checkbox !");
+            return redirect()->back();
+
+        }
     }
 
 }

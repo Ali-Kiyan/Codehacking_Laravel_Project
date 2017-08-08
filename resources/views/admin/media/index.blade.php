@@ -18,12 +18,16 @@
 
         <p class="alert alert-danger animated zoomInRight">{{session('multiple_deleted_photo')}}</p>
 
+    @elseif(Session::has('no_input'))
+
+        <p class="alert alert-warning animated zoomIn">{{session('no_input')}}</p>
+
     @endif
 
     @if($photos)
 
 
-      <form action="/delete/media" method="post" class="form-inline">
+      <form action="delete/media" method="post" class="form-inline">
 
           {{csrf_field()}}
 
@@ -31,11 +35,11 @@
 
         <div class="form-group">
             <select name="checkBoxArray" id="" class="form-control">
-              <option value="delete">Delete</option>
+              <option value="">Delete</option>
             </select>
         </div>
         <div class="form-group">
-           <input type="submit" class="btn btn-primary">
+           <input type="submit" name="multi_delete" class="btn btn-primary">
         </div>
 
 
@@ -57,12 +61,12 @@
                     <td>{{$photo->created_at ? $photo->created_at->diffForHumans() : 'no data' }}</td>
                     <td>
 
-                    {!! Form::open(['method' => 'DELETE', 'action' => ['AdminMediasController@destroy', $photo->id]]) !!}
 
+                        <input type="hidden" name="photo_single" value="{{$photo->id}}">
                         <div class="form-group">
-                            {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
+                            <input type="submit" name="delete_single" value="Delete" class="btn btn-sm btn-danger">
                         </div>
-                    {!! Form::close() !!}
+              
 
 
 

@@ -13,32 +13,22 @@ mix.styles([
     'resources/assets/css/libs/bootstrap.css',
     'resources/assets/css/libs/font-awesome.css',
     'resources/assets/css/libs/metisMenu.css',
-<<<<<<< HEAD
     'resources/assets/css/libs/styles.css',
     'resources/assets/css/libs/timeline.css',
     'resources/assets/css/libs/sb-admin-2.css'
-=======
-    'resources/assets/css/libs/sb-admin-2.css',
-    'resources/assets/css/libs/styles.css',
-    'resources/assets/css/libs/timeline.css'
-
-
->>>>>>> 431dd37da7114c09ba2539feba3161050087f72e
 
 ], 'public/css/libs.css');
 
 mix.scripts([
+
+
     'resources/assets/js/libs/jquery.js',
     'resources/assets/js/libs/bootstrap.js',
     'resources/assets/js/libs/metisMenu.js',
     'resources/assets/js/sb-admin-2.js',
-    'resources/assets/js/libs/jquery.js',
     'resources/assets/js/libs/scripts.js'
 
 
-<<<<<<< HEAD
-    
-=======
->>>>>>> 431dd37da7114c09ba2539feba3161050087f72e
+
 
 ], 'public/js/libs.js');

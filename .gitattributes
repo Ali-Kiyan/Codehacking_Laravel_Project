@@ -1,5 +1,2 @@
-* text=auto
-*.css linguist-vendored=false
-*.less linguist-vendored
-*.balde.php linguist-language=PHP
+* linguist-vendored
 *.php linguist-vendored=false

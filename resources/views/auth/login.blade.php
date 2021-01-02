@@ -54,15 +54,14 @@
                                     <i class="fa fa-btn fa-sign-in"></i> Login
                                 </button>
 
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+                                <a class="btn btn-link" href="{{ url('/password/reset') }}" disabled>Forgot Your Password?</a>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <span class="alert alert-info">Experimental user: Email Address:Alikiyand@gmail.com password: 021051</span>
-                            </div>
+                                <div class="col-md-12 col-md-offset-2" style="margin-top: 2%;">
+                                    <span class="alert alert-info">Experimental user: Email Address:Alikiyand@gmail.com password: 021051</span>
+                                </div>
                         </div>
-
                     </form>
                 </div>
             </div>
